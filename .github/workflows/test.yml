@@ -1,0 +1,33 @@
+name: Test Agent AI Plug Realtor OS
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Generate demo outputs
+        run: python -m agent_ai_plug.operator
+
+      - name: Upload demo outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-ai-plug-demo-output
+          path: output/
