@@ -1,26 +1,50 @@
-# Josh Operator v1
+# Agent AI Plug — Realtor Agent Kit
 
-A safe, testable prototype for a personal/business AI operator.
+A testable starter kit for building AI agent systems that real estate agents can actually use.
 
-This first version does **not** send emails, texts, update CRM records, touch money, or use real client data. It reads sample inputs and produces:
+This repo is not meant to be a random AI playground. It is the product foundation for **Agent AI Plug**: plug-and-play agent workflows for working Realtors who need practical help with lead follow-up, CRM cleanup, content, listing prep, client communication, and daily execution.
 
-- a daily action report
-- a ranked lead list
-- draft follow-up messages
-- an approval queue
-- tests that prove the workflow works
+## Big idea
 
-## Why this exists
+Most agents do not need a chatbot. They need a small team of focused AI agents that can:
 
-The goal is to build a real automation system in layers:
+- read structured inputs
+- identify what matters
+- draft useful outputs
+- queue actions for approval
+- avoid compliance landmines
+- create repeatable daily business leverage
 
-1. **Plan** — decide what matters today.
-2. **Draft** — prepare messages and actions.
-3. **Approval** — require human review before anything external happens.
-4. **Execute** — later, connect approved actions to Gmail, Notion, Calendar, CRM, etc.
-5. **Log** — keep a clear record of what happened.
+## V1 goal
 
-V1 only covers steps 1-3 using fake data so it can be tested safely.
+Build a kit of safe, reusable Realtor agents that can run against fake/sample data first.
+
+Nothing sends automatically. Nothing touches a live CRM. Nothing uses private client data. The first job is to prove the workflow works.
+
+## Agent kit included
+
+Planned agents live in `/agents`:
+
+1. **Lead Triage Agent** — ranks leads and recommends the next move.
+2. **Follow-Up Drafting Agent** — drafts short human-sounding texts/emails.
+3. **CRM Cleanup Agent** — flags missing tags, stale leads, duplicates, and bad records.
+4. **Listing Prep Agent** — creates listing checklist, photo notes, description angles, and seller questions.
+5. **Content Repurposing Agent** — turns one idea into posts, captions, email, and short video scripts.
+6. **Open House Follow-Up Agent** — turns sign-in notes into segmented follow-up drafts.
+7. **Compliance Review Agent** — checks outputs for obvious Fair Housing, advertising, and overclaim issues.
+8. **Daily Operator Agent** — creates the daily command plan and approval queue.
+
+## Repo structure
+
+```text
+agents/              Agent specs, prompts, inputs, outputs, safety rules
+agent_ai_plug/       Python package for testable agent workflows
+data/                Fake sample data only
+output/              Generated demo outputs, ignored locally if desired
+tests/               Automated tests
+.github/workflows/   GitHub Actions test runner
+sales/               Product packaging, offer, demos, install docs
+```
 
 ## Quick start
 
@@ -29,25 +53,15 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 pytest
-python -m josh_operator.operator
+python -m agent_ai_plug.operator
 ```
 
-After running it, check:
+Generated demo outputs:
 
 ```text
 output/daily_report.md
 output/approval_queue.json
 ```
-
-## Test data
-
-Sample files live in `/data`:
-
-- `leads.csv`
-- `tasks.json`
-- `calendar.json`
-
-Replace these with fake examples only. Do not commit real client data to this public repo.
 
 ## Safety rules
 
@@ -60,32 +74,34 @@ This repo should stay safe by default:
 - No CRM exports
 - No automatic sending
 - No financial actions
+- Human approval required before external actions
 
-## Roadmap
+## Product direction
 
-### V1 — Current
+This should become a sellable install kit for Realtors:
 
-- Read sample business inputs
-- Score leads
-- Generate a daily report
-- Generate an approval queue
-- Run tests in GitHub Actions
+- Starter prompts
+- Agent specs
+- Demo workflows
+- Setup instructions
+- Compliance guardrails
+- CRM export templates
+- Approval queue workflow
+- Optional Notion/GitHub dashboard
+- Optional n8n/Zapier/Make build paths
 
-### V2 — Local AI drafting
+## First sellable version
 
-- Add LLM-generated drafts from sanitized inputs
-- Keep approval required
-- Add message style rules for Josh
+The first version should be simple:
 
-### V3 — Real integrations
+**Agent AI Plug: Realtor Daily Operator Kit**
 
-- Gmail drafts only, no auto-send
-- Google Calendar read-only summary
-- Notion task logging
-- BoldTrail CSV export processor
+It helps an agent answer every morning:
 
-### V4 — Operator dashboard
+1. Who should I contact first?
+2. What should I say?
+3. What needs cleanup?
+4. What content can I post today?
+5. What requires my approval before sending?
 
-- Web UI for approve/edit/skip
-- Daily command center
-- End-of-day recap
+That is practical, valuable, and easy to demo.
