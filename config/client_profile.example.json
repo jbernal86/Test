@@ -1,0 +1,59 @@
+{
+  "brand": {
+    "product_name": "Agent AI Plug Realtor OS",
+    "client_display_name": "Sample Realtor",
+    "brokerage_name": "Sample Realty Group",
+    "market_area": "Casa Grande & Surrounding Areas",
+    "phone": "555-555-5555",
+    "email": "agent@example.com",
+    "website": "https://example.com",
+    "tagline": "Plug-and-play AI systems for real estate agents"
+  },
+  "tone": {
+    "style": "direct, helpful, human, concise",
+    "avoid": [
+      "robotic wording",
+      "pressure-heavy sales language",
+      "creepy activity-monitoring language",
+      "unverified claims"
+    ],
+    "signature": "Sample Realtor at Sample Realty Group"
+  },
+  "business_rules": {
+    "approval_required_before_sending": true,
+    "approval_required_before_crm_updates": true,
+    "allow_auto_send": false,
+    "allow_real_client_data_in_demo": false,
+    "crm_name": "Sample CRM",
+    "primary_goal": "prioritize leads, draft follow-up, and create a daily approval queue"
+  },
+  "lead_scoring": {
+    "ready_now": 80,
+    "seller_lead": 70,
+    "active_search": 60,
+    "nurture": 35,
+    "cold": 10,
+    "recent_activity_bonus": 25,
+    "preapproved_or_listing_bonus": 20,
+    "asked_or_followup_bonus": 10
+  },
+  "enabled_agents": [
+    "Lead Triage Agent",
+    "Follow-Up Drafting Agent",
+    "CRM Cleanup Agent",
+    "Listing Prep Agent",
+    "Content Repurposing Agent",
+    "Open House Follow-Up Agent",
+    "Compliance Review Agent",
+    "Daily Operator Agent"
+  ],
+  "compliance": {
+    "disclaimer": "This system provides workflow support and draft language only. The agent is responsible for reviewing all outputs and following brokerage, MLS, advertising, Fair Housing, and local legal requirements.",
+    "blocked_language_examples": [
+      "best agent unless substantiated",
+      "perfect for families",
+      "safe neighborhood",
+      "exclusive community for certain groups"
+    ]
+  }
+}
