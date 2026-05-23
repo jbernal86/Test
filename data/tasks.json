@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Review hot buyer follow-up drafts",
+    "priority": "high",
+    "due": "Today",
+    "notes": "Approve, edit, or skip before sending anything."
+  },
+  {
+    "title": "Clean stale CRM records",
+    "priority": "medium",
+    "due": "This week",
+    "notes": "Review stale sample leads and decide whether they belong in nurture."
+  },
+  {
+    "title": "Record one short market tip video",
+    "priority": "high",
+    "due": "Today",
+    "notes": "Use the Content Repurposing Agent output as the starting script."
+  }
+]
