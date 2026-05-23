@@ -1,8 +1,8 @@
 name: Test Agent AI Plug Realtor OS
 
+# Manual-only while this product kit is under active build.
+# This prevents failure emails on every intermediate commit.
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 
 jobs:
