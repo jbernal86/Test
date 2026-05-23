@@ -1,0 +1,60 @@
+{
+  "brand": {
+    "product_name": "Agent AI Plug Realtor OS",
+    "client_display_name": "Josh Bernal",
+    "brokerage_name": "Yost Realty Group at RE/MAX Casa Grande",
+    "market_area": "Casa Grande & Surrounding Areas",
+    "phone": "480-773-4489",
+    "email": "josh@yosthomes.com",
+    "website": "https://joshbernal.yosthomes.com",
+    "tagline": "Plug-and-play AI systems for real estate agents"
+  },
+  "tone": {
+    "style": "direct, concise, helpful, confident, human",
+    "avoid": [
+      "robotic wording",
+      "overly polished AI phrasing",
+      "pressure-heavy sales language",
+      "creepy activity-monitoring language",
+      "unverified claims"
+    ],
+    "signature": "Josh at RE/MAX Casa Grande"
+  },
+  "business_rules": {
+    "approval_required_before_sending": true,
+    "approval_required_before_crm_updates": true,
+    "allow_auto_send": false,
+    "allow_real_client_data_in_demo": false,
+    "crm_name": "BoldTrail",
+    "primary_goal": "create a daily command center for lead follow-up, CRM cleanup, content, and listing prep"
+  },
+  "lead_scoring": {
+    "ready_now": 80,
+    "seller_lead": 70,
+    "active_search": 60,
+    "nurture": 35,
+    "cold": 10,
+    "recent_activity_bonus": 25,
+    "preapproved_or_listing_bonus": 20,
+    "asked_or_followup_bonus": 10
+  },
+  "enabled_agents": [
+    "Lead Triage Agent",
+    "Follow-Up Drafting Agent",
+    "CRM Cleanup Agent",
+    "Listing Prep Agent",
+    "Content Repurposing Agent",
+    "Open House Follow-Up Agent",
+    "Compliance Review Agent",
+    "Daily Operator Agent"
+  ],
+  "compliance": {
+    "disclaimer": "This system provides workflow support and draft language only. The agent is responsible for reviewing all outputs and following brokerage, MLS, advertising, Fair Housing, and local legal requirements.",
+    "blocked_language_examples": [
+      "best agent unless substantiated",
+      "perfect for families",
+      "safe neighborhood",
+      "exclusive community for certain groups"
+    ]
+  }
+}
